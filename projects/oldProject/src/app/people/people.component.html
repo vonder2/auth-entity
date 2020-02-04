@@ -1,0 +1,9 @@
+<p>people works!</p>
+<table>
+<!--  async auto unsubscribe from subscription-->
+  <tr *ngFor="let person of localPersons | async">
+    <th *ngIf="firstLine">{{person}}</th>
+    <td *ngFor="let key of person | keyValuePipe">{{person[key]}}</td>
+  </tr>
+
+</table>

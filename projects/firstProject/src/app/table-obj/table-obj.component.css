@@ -1,0 +1,18 @@
+table,td,th
+{
+  border: 2px solid blanchedalmond;
+  border-collapse: collapse;
+  padding: 2px;
+  cursor: pointer;
+}
+
+tr:first-child
+{
+  background-color: blanchedalmond;
+  user-select: none;
+}
+
+tr.selected
+{
+  background-color: #fff9f0;
+}

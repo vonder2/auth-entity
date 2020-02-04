@@ -1,0 +1,29 @@
+<app-navbar (navClick)="page=$event"></app-navbar>
+<!--<app-my-select [options]="cityNamesArr | slice:1:endValue" (optionSelected)="page=$event"></app-my-select>-->
+<!--<app-my-select [options]="(obj | keyValuePipe)" (optionSelected)="page=$event"></app-my-select>-->
+<!--<div><strong>{{page}}</strong></div>-->
+
+<!--<app-data-source></app-data-source>-->
+<!--<app-people></app-people>-->
+<!--<app-auth-form-reactive></app-auth-form-reactive>-->
+
+<!--Standart router component-->
+<app-color-home></app-color-home>
+<router-outlet></router-outlet>
+
+
+<!--<app-auth-material></app-auth-material>-->
+
+
+
+<app-brother *ngIf="page=='Chat'" class="brother1" [name]="'Brother1'"></app-brother>
+<app-brother *ngIf="page=='Chat'" class="brother2" [name]="'Brother2'"></app-brother>
+
+<app-view-encapsulation-parent *ngIf="page=='Encapsulation'"></app-view-encapsulation-parent>
+
+
+<app-ng-if *ngIf="page=='ngIf'"></app-ng-if>
+
+<app-city-info *ngIf="page=='city'"></app-city-info>
+
+<!--<app-pipochka></app-pipochka>-->

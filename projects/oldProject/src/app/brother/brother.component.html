@@ -1,0 +1,8 @@
+<h1>{{name}}</h1>
+<p>
+  <input #inputID (keyup)="submitFunc($event)" [(ngModel)]="msg" maxlength="20">
+  <button (click)="sendMessage()">Send</button>
+</p>
+<div class="container" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+  <div *ngFor="let msgToPrint of getChat()">{{msgToPrint}}</div>
+</div>

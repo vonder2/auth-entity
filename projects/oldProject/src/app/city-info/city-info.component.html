@@ -1,0 +1,10 @@
+<p>city-info works!</p>
+<ng-container *ngFor="let city of cityNames" >
+  <div *ngIf="city==currentCity">
+    {{city}}
+    <div><img width="500" src="{{dataObj[city].url}}"></div>
+    <div>{{dataObj[city].description}}</div>
+
+
+  </div>
+</ng-container>

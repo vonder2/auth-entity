@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a (click)="navClickEvent('Chat')" class="nav-link" href="#">Chat</a>
+      </li>
+
+      <li class="nav-item">
+        <a (click)="navClickEvent('Encapsulation')" class="nav-link" href="#">Encapsulation</a>
+      </li>
+
+      <li class="nav-item">
+        <a (click)="navClickEvent('ngIf')" class="nav-link" href="#">ngIf</a>
+      </li>
+
+      <li *ngFor="let city of citiesNames" (click)="navClickEvent('city')" class="nav-item">
+        <a (click)="handler(city)" class="nav-link" href="#">{{city}}</a>
+      </li>
+    </ul>
+</nav>

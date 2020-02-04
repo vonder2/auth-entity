@@ -1,0 +1,37 @@
+.myComponent
+{
+  position: absolute;
+  top: 0;
+  /*left: 0;*/
+  /*width: 30vw;*/
+  height: 100vh;
+  background-color: orange;
+  transition: 300ms;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.content
+{
+  position: absolute;
+  padding: 20px;
+}
+
+.pipochka {
+  position: absolute;
+  background-color: green;
+  top: 45vh;
+  /*left: 30vw;*/
+
+  width: 20px;
+  height: 60px;
+
+  border-radius: 0 10px 10px 0;
+
+  cursor: pointer;
+}
+
+
+/*.closedCSS*/
+/*{*/
+/*  left: -30vw;*/
+/*}*/

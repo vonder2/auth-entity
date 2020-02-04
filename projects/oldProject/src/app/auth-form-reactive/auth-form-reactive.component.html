@@ -1,0 +1,23 @@
+<form (submit)="submit()" [formGroup]="auth">
+  <label >
+    <div>
+      Login
+      <span class="errorMassage" *ngIf="logPass.login.invalid  && logPass.login.touched">Login cannot be empty</span>
+    </div>
+    <input formControlName="login" [ngClass]="{error: logPass.login.invalid}"/>
+  </label>
+  <label >
+    <div>
+      Password
+      <span class="errorMassage" *ngIf="logPass.password.invalid  && logPass.password.touched">Password cannot be empty and 3 symbols min</span>
+    </div>
+    <input formControlName="password"  [ngClass]="{error: logPass.password.invalid && logPass.password.touched}" />
+<!--    logPass.password.dirty - something was input-->
+<!--    logPass.password.touched - focus was on the field-->
+  </label>
+  <p>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </p>
+
+</form>

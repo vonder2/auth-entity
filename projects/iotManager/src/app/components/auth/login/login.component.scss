@@ -1,0 +1,16 @@
+.container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    width: 50%;
+    margin: auto;
+  }
+
+  .alert {
+    margin: 0.5rem auto;
+  }
+}
