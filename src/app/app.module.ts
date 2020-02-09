@@ -11,6 +11,7 @@ import { BookComponent } from './Components/book/book.component';
 import { EditFormComponent } from './Components/edit-form/edit-form.component';
 import {PhoneBookInterceptor} from './Classes/phone-book-interceptor';
 import { MaterialDesignModule } from './Modules/material-design.module';
+import { TableComponent } from './Components/table/table.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { MaterialDesignModule } from './Modules/material-design.module';
     AppComponent,
     AuthComponent,
     BookComponent,
-    EditFormComponent
+    EditFormComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
