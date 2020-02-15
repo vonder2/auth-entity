@@ -1,0 +1,13 @@
+
+<p>table works!</p>
+
+<table>
+  <tr>
+    <th>#</th>
+    <th *ngFor="let head of header">{{head}}</th>
+  </tr>
+  <tr *ngFor="let row of data; let i = index">
+    <td>{{i}}</td>
+    <td *ngFor="let col of row | keyvalue">{{col.value}}</td>
+  </tr>
+</table>

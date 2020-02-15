@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {DataStoreService} from './dataStore.service';
+import {HttpClient} from '@angular/common/http';
 import {PhoneBookURLs} from '../Classes/phoneBookURLs';
 import {Contact} from '../Classes/contact';
 

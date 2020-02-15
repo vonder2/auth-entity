@@ -11,6 +11,7 @@ import { BookComponent } from './Components/book/book.component';
 import { EditFormComponent } from './Components/edit-form/edit-form.component';
 import {PhoneBookInterceptor} from './Classes/phone-book-interceptor';
 import { MaterialDesignModule } from './Modules/material-design.module';
+import { TableComponent } from './Components/table/table.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -33,7 +34,8 @@ import { LikeDislikeComponent } from './Components/like-dislike/like-dislike.com
     EditFormComponent,
     NavbarComponent,
     DashboardComponent,
-    LikeDislikeComponent
+    LikeDislikeComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,

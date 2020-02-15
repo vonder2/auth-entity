@@ -29,41 +29,44 @@ import {MatButtonModule, MatIconModule, MatInputModule} from '@angular/material'
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BrotherComponent,
-    ViewEncapsulationChildComponent,
-    ViewEncapsulationParentComponent,
-    PipochkaComponent,
-    NgIfComponent,
-    NavbarComponent,
-    CityInfoComponent,
-    MySelectComponent,
-    KeyValuePipePipe,
-    PeopleComponent,
-    DataSourceComponent,
-    AuthFormComponent,
-    AuthFormReactiveComponent,
-    RedComponent,
-    GreenComponent,
-    BlueComponent,
-    ColorHomeComponent,
-    YellowComponent,
-    AuthMaterialComponent
-  ],
-  imports: [
-    BrowserModule,
+    declarations: [
+        AppComponent,
+        BrotherComponent,
+        ViewEncapsulationChildComponent,
+        ViewEncapsulationParentComponent,
+        PipochkaComponent,
+        NgIfComponent,
+        NavbarComponent,
+        CityInfoComponent,
+        MySelectComponent,
+        KeyValuePipePipe,
+        PeopleComponent,
+        DataSourceComponent,
+        AuthFormComponent,
+        AuthFormReactiveComponent,
+        RedComponent,
+        GreenComponent,
+        BlueComponent,
+        ColorHomeComponent,
+        YellowComponent,
+        AuthMaterialComponent
+    ],
+    imports: [
+        BrowserModule,
 
-    ReactiveFormsModule,
-    RoutingModule,
-    RouterModule,
-    BrowserAnimationsModule,
-    MatInputModule,
-    FormsModule,
-    MatIconModule,
-    MatButtonModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+        ReactiveFormsModule,
+        RoutingModule,
+        RouterModule,
+        BrowserAnimationsModule,
+        MatInputModule,
+        FormsModule,
+        MatIconModule,
+        MatButtonModule,
+    ],
+    providers: [],
+    exports: [
+        KeyValuePipePipe
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

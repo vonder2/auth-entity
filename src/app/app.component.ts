@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,8 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 export class AppComponent {
   title = 'PhoneBook';
   router = 'book';
+  header = ['firstName', 'lastName'];
+  data = [{firstName: 'Sasha', lastName: 'Sominsky'}, {firstName: 'Masha', lastName: 'Ivanova'}];
 
   updateRouter(newRouter: string) {
     setTimeout(() => {
