@@ -1,0 +1,11 @@
+table,td,th
+{
+  border: 2px solid blanchedalmond;
+  border-collapse: collapse;
+  padding: 2px;
+}
+
+tr:first-child
+{
+  background-color: blanchedalmond;
+}

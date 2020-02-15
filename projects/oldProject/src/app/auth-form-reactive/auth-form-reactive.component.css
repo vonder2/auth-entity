@@ -1,0 +1,10 @@
+.error
+{
+  border-color: red;
+}
+
+.errorMassage
+{
+  color: red;
+  font-size: xx-small;
+}

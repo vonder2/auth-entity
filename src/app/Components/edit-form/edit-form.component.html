@@ -1,0 +1,52 @@
+<h1 mat-dialog-title>{{title}} dialog</h1>
+
+
+<div mat-dialog-content>
+
+
+  <form #contactForm="ngForm">
+    <mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input matNativeControl required [(ngModel)]="data.name" name="name">
+      <mat-error>Field required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Last Name</mat-label>
+      <input matNativeControl required [(ngModel)]="data.lastName" name="lastName">
+      <mat-error>Field required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Phone</mat-label>
+      <input matNativeControl required [(ngModel)]="data.phone"
+             name="phone" #tel="ngModel" type="tel" minlength="5" pattern="[0-9]+">
+      <mat-error>6 numbers min. required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matNativeControl required [(ngModel)]="data.email"
+             name="email" #email="ngModel" type="email" minlength="4">
+      <mat-error *ngIf="email.invalid">Email must be at least 4 characters long.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Home address</mat-label>
+      <input matNativeControl required [(ngModel)]="data.address" name="address" #address="ngModel">
+<!--        <textarea formControlName="Address" matInput placeholder="Address" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>-->
+      <mat-error *ngIf="address.invalid && address.pristine"> Invalid address </mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <mat-label>More information</mat-label>
+      <input matNativeControl [(ngModel)]="data.description" name="moreInfo">
+    </mat-form-field>
+
+  </form>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" cdkFocusInitial>No Thanks</button>
+  <button mat-stroked-button [mat-dialog-close]="data" color="primary"
+          [disabled]="contactForm.invalid">Ok</button>
+</div>
+

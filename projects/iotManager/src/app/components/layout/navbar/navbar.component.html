@@ -1,0 +1,6 @@
+<nav class="navbar navbar-light bg-dark">
+  <div class="container">
+    <h2 class="text-light">IOT management platform</h2>
+    <button *ngIf="(isLogged | async)" type="button" class="float-right btn btn-danger btn-sm" (click)="logout()">Logout</button>
+  </div>
+</nav>

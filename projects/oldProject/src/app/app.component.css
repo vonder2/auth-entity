@@ -1,0 +1,31 @@
+app-brother
+{
+  /*border: 1px solid darkblue;*/
+  width: 250px;
+  height: 350px;
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+
+  /*top: 20px;*/
+  background-color: lightgoldenrodyellow;
+  margin: 20px;
+
+}
+
+.brother1 {
+
+  background-color: antiquewhite;
+  /*margin-right: 30px;*/
+}
+/*.brother2 {*/
+/*  */
+/*}*/
+
+
+* {
+  /*position: absolute;*/
+  /*padding-left: 50px;*/
+  /*text-align: center;*/
+  /*color: blue;*/
+}

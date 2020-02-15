@@ -1,0 +1,8 @@
+<table>
+  <tr>
+    <th *ngFor="let f of getFieldNames()">{{f}}</th>
+  </tr>
+  <tr *ngFor="let person of people">
+    <td *ngFor="let fieldName of getFieldNames()">{{person[fieldName]}}</td>
+  </tr>
+</table>

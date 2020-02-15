@@ -1,0 +1,12 @@
+<div class="container dashboard">
+  <div class="card">
+    <div class="card-body">
+      <div *ngIf="loading else data">Loading...</div>
+      <ng-template #data>
+        <div class="card-text">
+          Dashboard
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

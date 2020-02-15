@@ -1,0 +1,38 @@
+<h1>Phone Book</h1>
+<form class="paperSheet" [formGroup]="authFG">
+  <div>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matNativeControl [formControl]="loginFC">
+
+      <span matSuffix><mat-icon>person_outline</mat-icon></span>
+      <mat-error>Wrong format</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matNativeControl [type]="hidePassword ? 'password' : 'text'" [formControl]="passwordFC">
+      <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+        <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      <mat-error>Too short or wrong format.</mat-error>
+    </mat-form-field>
+  </div>
+
+
+  <p align="center">
+    <button [disabled]="authFG.invalid" (click)="sendAuthInfo('signIn')" align="center" mat-stroked-button>
+      Press to log in
+    </button>
+    <button [disabled]="authFG.invalid" (click)="sendAuthInfo('register')" align="center" mat-stroked-button>
+      Register
+    </button>
+  </p>
+
+</form>
+
+<div class="example-loading-shade" *ngIf="isLoading">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+</div>

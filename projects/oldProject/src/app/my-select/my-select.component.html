@@ -1,0 +1,5 @@
+<p>my-select works!</p>
+<select (change)="valueChanged()" [(ngModel)]="val">
+  <option>Select city</option>
+  <option *ngFor="let option of options">{{option | titlecase}}</option>
+</select>

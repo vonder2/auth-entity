@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <td>Quantity</td>
+    <td><input type="number" min="0" [(ngModel)]="quantity"></td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td><input type="number" min="0" [(ngModel)]="price"></td>
+    <td>
+      <app-select [array]="currenciesList" (selectChanged)="setCurrencyFrom($event)"></app-select></td>
+  </tr>
+  <tr>
+    <td>Total</td>
+    <td>{{getTotal()}}</td>
+    <td>
+      <app-select [array]="currenciesList" (selectChanged)="setCurrencyTo($event)"></app-select></td>
+  </tr>
+</table>

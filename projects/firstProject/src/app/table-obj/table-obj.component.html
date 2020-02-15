@@ -1,0 +1,9 @@
+<table border="1">
+  <tr>
+    <th *ngFor="let fieldName of fieldNames">{{fieldName}}</th>
+  </tr>
+
+  <tr *ngFor="let obj of objects; let i = index" (click)="clickHandler(i)">
+    <td *ngFor="let field of fieldNames">{{obj[field]}}</td>
+  </tr>
+</table>

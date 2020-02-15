@@ -1,0 +1,10 @@
+
+
+<!--<app-navbar>-->
+
+<!--  &lt;!&ndash; <app-dashboard></app-dashboard> &ndash;&gt;-->
+<!--</app-navbar>-->
+ <app-auth (outputVar)="updateRouter($event)" *ngIf="router=='auth'" class="centered"></app-auth>
+ <app-book (outputVar)="updateRouter($event)" *ngIf="router=='book'" class="centered"></app-book>
+
+<!--<app-like-dislike></app-like-dislike>-->
