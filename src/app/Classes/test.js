@@ -94,22 +94,71 @@ console.log("7. a+b = ", sum(1,2));
 // console.log(solution(999999, 8899999999));
 
 
-console.log("8. Solution");
+console.log('8. Find repeated character in string');
+
 function solution(S = "sdfsdf") {
   let mySet = new Set();
 
-  console.log('my set is', mySet);
-  for (let i; i < S.length; i++ ) {
+  for (let i = 0; i < S.length; i++ )
+  {
     if (mySet.has(S.charAt(i)))
     {
-      console.log('mySet.has(S.charAt(i))');
       return S.charAt(i)
     }
     else
     {
-      console.log( "mySet.add()");
       mySet.add(S.charAt(i))
+      // console.log('i = ', i, ', my set is', mySet);
     }
   }
 }
-console.log(solution("codility"));
+console.log('repeated char is ', solution("codlituyy12345"));
+
+
+console.log("9. If binary graph is zigzag");
+
+let rootNode = {};
+rootNode.left = new String('1');
+// rootNode.right = new String('2');
+// //
+rootNode.left.right = new String('3');
+// rootNode.right.right = new String('4');
+rootNode.left.right.left = new String('5');
+// rootNode.left.left.right = new String('6');
+
+
+
+function isZigzag(node) {
+  if (!node)
+    return 'node is null';
+
+  const leftNode = node.left;
+  const rightNode = node.right;
+
+  if (leftNode && rightNode)
+  {
+    console.log('have both left and right - not zigzag');
+    return false;
+  }
+
+  if (!(leftNode || rightNode))
+  {
+    console.log('no left, no right - end of graph');
+    return true;
+  }
+
+  if (leftNode) {
+    if (leftNode.left) return false;
+    console.log('go left');
+    return isZigzag(leftNode);
+  }
+
+  if (rightNode) {
+    if (rightNode.right) return false;
+    console.log('go right');
+    return isZigzag(rightNode);
+  }
+}
+
+console.log(isZigzag(rootNode));
+
